@@ -11,7 +11,7 @@
     "dompurify": "^3.2.4",
     "react": "^19.0.0",
     "react-confirm-alert": "^3.0.6",
-    "react-dom": "^18.2.0",
+    "react-dom": "^19.0.0",
     "react-icons": "^4.7.1",
     "react-paginate": "^8.1.5",
     "react-quill": "^2.0.0",
