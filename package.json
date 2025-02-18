@@ -13,7 +13,7 @@
     "react-confirm-alert": "^3.0.6",
     "react-dom": "^19.0.0",
     "react-icons": "^4.7.1",
-    "react-paginate": "^8.1.5",
+    "react-paginate": "^8.3.0",
     "react-quill": "^2.0.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^6.8.1",
