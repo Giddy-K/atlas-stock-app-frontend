@@ -1,0 +1,7 @@
+# dependabot.yml
+version: 2
+updates:
+  - package-ecosystem: "npm" # Specify the package manager (e.g., npm, pip, maven, gradle, etc.)
+    directory: "/" # Directory where the package manifest (e.g., package.json) is located
+    schedule:
+      interval: "weekly" # How often to check for updates (daily, weekly, or monthly)
