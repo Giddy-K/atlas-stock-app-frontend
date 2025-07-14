@@ -4,13 +4,17 @@ import ReactDOM from "react-dom";
 import "./Loader.scss";
 
 const Loader = () => {
+    const loaderRoot = document.getElementById("loader");
+  if (!loaderRoot) return null;
+
   return ReactDOM.createPortal(
     <div className="wrapper">
       <div className="loader">
         <img src={loaderImg} alt="Loading..." />
       </div>
     </div>,
-    document.getElementById("loader")
+    loaderRoot
+    // document.getElementById("loader")
   );
 };
 
