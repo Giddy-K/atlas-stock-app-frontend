@@ -11,6 +11,12 @@
     }
   }
 }
+
+.home > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 .home-links {
   display: flex;
   justify-content: center;
@@ -46,6 +52,7 @@
 .hero-image {
   width: 50%;
 }
+
 @media screen and (max-width: 600px) {
   .hero {
     flex-direction: column;
