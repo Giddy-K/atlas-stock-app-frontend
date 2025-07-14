@@ -1,6 +1,7 @@
 .home {
   background-color: #030b6b;
-  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
 
   & nav {
     padding-top: 1.5rem;
@@ -24,10 +25,16 @@
   }
 }
 
+// .hero {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  padding: 0 !important;
+  overflow: hidden;
 }
 
 .hero-text {
@@ -62,8 +69,12 @@
   }
   .hero-image {
     width: 100%;
+    height: auto;
+    display: block;
     &img {
       width: 100%;
+      height: auto;
+      display: block;
     }
   }
 }
