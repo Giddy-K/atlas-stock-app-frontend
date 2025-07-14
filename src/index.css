@@ -29,6 +29,13 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 html {
   font-size: 10px;
 }
@@ -36,6 +43,7 @@ html {
 body {
   font-family: var(--font-family);
   background: #eee;
+  position: relative;
 }
 
 section {
@@ -56,7 +64,8 @@ section {
 }
 
 .header {
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
+  padding-top: 0;
 }
 
 /* UTILITY CLASSES */
