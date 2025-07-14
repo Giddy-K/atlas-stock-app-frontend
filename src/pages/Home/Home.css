@@ -1,6 +1,7 @@
 .home {
   background-color: #030b6b;
   min-height: 100dvh;
+  overflow: hidden;
 }
 
 .home nav {
@@ -75,7 +76,7 @@
     width: 100%;
   }
 
-  .hero-imageimg {
+  .hero-image img {
     width: 100%;
     height: auto;
     display: block;
