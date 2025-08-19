@@ -1,6 +1,6 @@
 import React from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+import { useQuill } from "react-quilljs";
+import "quill/dist/quill.snow.css";
 import Card from "../../card/Card";
 
 import "./ProductForm.scss";
@@ -15,6 +15,24 @@ const ProductForm = ({
   handleImageChange,
   saveProduct,
 }) => {
+  const { quill, quillRef } = useQuill({
+    theme: "snow",
+    modules: ProductForm.modules,
+    formats: ProductForm.formats,
+  });
+
+  // Sync description state with editor
+  React.useEffect(() => {
+    if (quill) {
+      quill.on("text-change", () => {
+        setDescription(quill.root.innerHTML);
+      });
+
+      // Load initial value
+      quill.root.innerHTML = description || "";
+    }
+  }, [quill, setDescription, description]);
+
   return (
     <div className="add-product">
       <Card cardClass={"card"}>
@@ -35,9 +53,10 @@ const ProductForm = ({
                 <img src={imagePreview} alt="product" />
               </div>
             ) : (
-              <p>No image set for this poduct.</p>
+              <p>No image set for this product.</p>
             )}
           </Card>
+
           <label>Product Name:</label>
           <input
             type="text"
@@ -75,13 +94,8 @@ const ProductForm = ({
           />
 
           <label>Product Description:</label>
-          <ReactQuill
-            theme="snow"
-            value={description}
-            onChange={setDescription}
-            modules={ProductForm.modules}
-            formats={ProductForm.formats}
-          />
+          {/* New editor */}
+          <div ref={quillRef} />
 
           <div className="--my">
             <button type="submit" className="--btn --btn-primary">
@@ -110,6 +124,7 @@ ProductForm.modules = {
     ["clean"],
   ],
 };
+
 ProductForm.formats = [
   "header",
   "font",
